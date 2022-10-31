@@ -13,7 +13,7 @@ This applies for `kde plasma` and `gnome` desktop environment
 Set appropriate variables based on your organization details
 
 If you are using a setup file you can add the following if you prefer session based in `bash` , `sh` , `zsh` ... e.t.c
- ```sh
+```sh
 http_proxy="http://<username>:<password>@<hostname>:<port>/"
 https_proxy="http://<username>:<password>@<hostname>:<port>/"
 ftp_proxy="http://<username>:<password>@<hostname>:<port>/"
@@ -34,8 +34,7 @@ If you don't like this kind of redundancy you can make use of a function for you
 - `.zshrc` for zsh
 e.t.c
 
-```
-...sh
+```sh
 #Export proxy
 function setProxy(){
 export {http,ftp,https}_proxy="http://<username>:<password>@<hostname>:<port>/"
@@ -74,9 +73,9 @@ sudo nano /etc/apt/apt.conf
 ```
 In the file add the following proxy content
 ```sh
-Acquire::http::proxy "http://<username>:<password>@<hostname>:<port>/"
-Acquire::https::proxy "http://<username>:<password>@<hostname>:<port>/"
-Acquire::ftp::proxy "http://<username>:<password>@<hostname>:<port>/"
+Acquire::http::proxy "http://<username>:<password>@<hostname>:<port>/";
+Acquire::https::proxy "http://<username>:<password>@<hostname>:<port>/";
+Acquire::ftp::proxy "http://<username>:<password>@<hostname>:<port>/";
 ```
 Once you've added your correct values then you can update and install apps
 ```sh
@@ -86,8 +85,8 @@ In the logs if you see `Ign:...` means network is unreachable but `Get:...` mean
 To disable this just re-edit the file and add `#` before the `Acquire`
 
 ```sh
-#Acquire::http::proxy "http://<username>:<password>@<hostname>:<port>/"
-#Acquire::https::proxy "http://<username>:<password>@<hostname>:<port>/"
-#Acquire::ftp::proxy "http://<username>:<password>@<hostname>:<port>/"
+#Acquire::http::proxy "http://<username>:<password>@<hostname>:<port>/";
+#Acquire::https::proxy "http://<username>:<password>@<hostname>:<port>/";
+#Acquire::ftp::proxy "http://<username>:<password>@<hostname>:<port>/";
 ```
 

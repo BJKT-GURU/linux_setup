@@ -53,6 +53,15 @@ For the above the functions to set proxy now we'll just call them from the termi
 ```sh
 setProxy
 ```
+To unset
+```sh
+unsetProxy
+```
+To test if there is proxy
+```sh
+echo $http_proxy
+```
+
 Should set proxy for any program that will be launched from that terminal via the live session eg `pnpm`,'npm',`vcode`
 
 To set up the system to be able to download system remote repositories and updates you should consider the `etc` folder since this is where most of the configuration files are stored. If you are not sure always store a backup of a file you find in this folder to make sure if you mess up the files you have a restore point
